@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+color
+</title>
+<style>
+	body{
+		color:rgba(0,0,0,0.5);
+		text-align:center;
+		letter-spacing: .5em;
+		top:15%;
+		background:linear-gradient(to right ,pink,blue);
+	}
+</style>
+</head>
+<body id="gradent">
+	<h1>background color genertater
+	</h1>
+<input type="color" class="colorone" name="colorone" value="blue">
+<input type="color" class="colortwo" name="colortwo" value="pink">
+<script type="text/javascript"> 
+var colorone=document.querySelector(".colorone");
+var colortwo=document.querySelector(".colortwo");
+var body=document.getElementById("gradent");
+function c(){
+let g=confirm("are u sure u want to change the color");
+if(g){body.style.background="linear-gradient(to right,"+colorone.value+","+colortwo.value+")";
+}
+else{alert("ok as u wish");}
+
+}
+colorone.addEventListener("input",c);
+colortwo.addEventListener("input",c);
+</script>
+
